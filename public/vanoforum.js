@@ -79,5 +79,4 @@ btn.addEventListener("click", () => {
     });
 });
 
-// Load on page start
 window.addEventListener("DOMContentLoaded", loadArticles);
