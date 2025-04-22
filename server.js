@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-const MONGO_URI = 'mongodb://127.0.0.1:27017/vanoforum'; 
+const MONGO_URI = 'mongodb+srv://vmahomedov:U6k7ORmehRy8OJuE@cluster0.qbdv9k1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
