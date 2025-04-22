@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Krona One', sans-serif;
+  background-color: #dedede;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #dedede;
+  border-bottom: 2px solid #312d2d;
+  padding: 30px 0; 
+  text-align: center;
+  font-size: 36px; 
+  z-index: 1000;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 200px 40px 60px 40px;
+  gap: 40px;
+  flex-grow: 1;
+}
+
+.form-container {
+  width: 35%;
+  min-width: 300px;
+}
+
+.form-container h2 {
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #312d2d;
+  font-family: 'Krona One', sans-serif;
+  font-size: 14px;
+  padding: 5px;
+}
+
+button {
+  background-color: #312d2d;
+  color: white;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 15px;
+  cursor: not-allowed;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+button.enabled {
+  cursor: pointer;
+  opacity: 1;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.articles-container {
+  background: white;
+  border: 10px solid #312d2d;
+  border-radius: 20px;
+  padding: 20px;
+  width: 60%;
+  min-width: 320px;
+  height: 400px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.article {
+  background-color: #f4f4f4;
+  border-left: 5px solid #312d2d;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+}
+
+.article:hover {
+  background-color: #e1e1e1;
+}
+
+.article h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.article small {
+  color: #777;
+  font-size: 12px;
+}
+
+.article p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+footer {
+  background-color: #312d2d;
+  color: rgb(97, 94, 94);
+  text-align: center;
+  padding: 20px 0; 
+  font-size: 14px; 
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.user-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: 'Krona One', sans-serif;
+  color: #312d2d;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-top: -4px;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 160px 20px 60px 20px;
+  }
+
+  .form-container,
+  .articles-container {
+    width: 100%;
+  }
+}

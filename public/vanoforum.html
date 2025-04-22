@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Van’O’Forum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vanoforum.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-text">Van'</span>
+      <img src="logo.png" alt="Logo" class="logo-img">
+      <span class="logo-text">'Forum</span>
+    </div>
+  </header>
+  
+
+<main>
+  <div class="form-container">
+    <div class="user-header">
+        <div class="user-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <circle cx="32" cy="20" r="12" fill="#312d2d"/>
+            <path d="M32 36c-12 0-22 7-22 16v4h44v-4c0-9-10-16-22-16z" fill="#312d2d"/>
+          </svg>
+        </div>
+        <h2>User Details</h2>
+      </div>
+      
+    <input type="text" id="username" placeholder="Username">
+    <input type="text" id="title" placeholder="Title">
+    <textarea id="content" placeholder="Article" rows="4"></textarea>
+    <button id="publishBtn" disabled>Publish</button>
+  </div>
+
+  <div class="articles-container" id="articles">
+  </div>
+</main>
+
+<footer>
+  @2025 All Rights are reserved
+</footer>
+
+<script src="vanoforum.js"></script>
+</body>
+</html>
