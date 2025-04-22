@@ -4,11 +4,13 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-const MONGO_URI = 'mongodb+srv://vmahomedov:U6k7ORmehRy8OJuE@cluster0.qbdv9k1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const MONGO_URI = 'mongodb+srv://vmahomedov:U6k7ORmehRy8OJuE@cluster0.qbdv9k1.mongodb.net/?retryWrites=true&w=majority'; // Or your remote URI
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  tls: true
 });
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => console.log('Connected to MongoDB'));
