@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-const MONGO_URI = 'mongodb+srv://vmahomedov:wsKa10ea0D5lARlM@cluster0.qbdv9k1.mongodb.net/?retryWrites=true&w=majority&tls=true'; // Or your remote URI
+const MONGO_URI = 'mongodb+srv://vmahomedov:<db_password>@cluster0.qbdv9k1.mongodb.net/?retryWrites=true&w=majority&tls=true'; 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
