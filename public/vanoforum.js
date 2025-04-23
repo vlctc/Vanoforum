@@ -33,7 +33,7 @@ function createArticleElement(article) {
 }
 
 function loadArticles() {
-  fetch('http://localhost:3000/api/articles')
+  fetch('https://vanoforum.onrender.com/api/articles')
     .then(res => res.json())
     .then(data => {
       articles.innerHTML = "";
@@ -54,7 +54,7 @@ btn.addEventListener("click", () => {
     content: content.value.trim()
   };
 
-  fetch('http://localhost:3000/api/articles', {
+  fetch('https://vanoforum.onrender.com/api/articles', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
